@@ -42,7 +42,15 @@ class UniqueCollectionTest {
     }
 
     @Test
-    fun removeAnItem(){
+    fun removeAnItem() {
+        val item1 = Item("A")
+        val item2 = Item("B")
+
+        collection.addItem(item1)
+        collection.addItem(item2)
+        collection.remove(item1)
+
+        assert(collection.size() == 1)
 
     }
 }
